@@ -7,7 +7,7 @@ services:
      APP_PORT: $APP_PINSERVER_WEB_PORT
 
   node:
-    image: tulipan81/blind_pin_server:v0.0.2@sha256:c3d32ac20594af9303de1971d014f39929a76efd4aa9717bedb77814117e1f98
+    image: tulipan81/blind_pin_server:v0.0.3@sha256:b251bac87b5a3b302769554bd19baded30e1a89b844f88872b70d09ff1717451
     depends_on:
       - tor
       - web
@@ -21,7 +21,7 @@ services:
       - ${APP_DATA_DIR}/data/pins:/pins
 
   web: 
-    image: tulipan81/pinserver_web:v0.0.15@sha256:4cba37193f918e8fc91a124a222e05ca35630a31094ded18139d4bab128275b8
+    image: tulipan81/pinserver_web:v0.0.30@sha256:80a576b16869c007bda5f903f0d0f7f0c837f7a86fe216decf50075286e62e67
     depends_on: 
       - tor
     restart: on-failure
@@ -32,9 +32,11 @@ services:
       - ${APP_DATA_DIR}/data/server_private_key.key:/app/server_private_key.key
       - ${APP_DATA_DIR}/data/pins:/app/pins
     environment:
-      PINSERVER_URL: ${APP_PINSERVER_HIDDEN_SERVICE}
-      PINSERVER_PORT: ${APP_PINSERVER_PORT}
-  
+      PINSERVER_URL_A: ${APP_PINSERVER_HIDDEN_SERVICE}
+      PINSERVER_PORT_A: ${APP_PINSERVER_PORT}
+      PINSERVER_URL_B: ${APP_TAILSCALE_URL}
+      PINSERVER_PORT_B: ${APP_PINSERVER_PORT}
+
   tor:
     image: getumbrel/tor:0.4.7.8@sha256:2ace83f22501f58857fa9b403009f595137fa2e7986c4fda79d82a8119072b6a
     user: "1000:1000"
