@@ -1,5 +1,5 @@
 export APP_PINSERVER_PORT="8096"
-export APP_PINSERVER_WEB_PORT="8081"
+export APP_PINSERVER_WEB_PORT="8082"
 
 local app_pinserver_hidden_service_file="${EXPORTS_TOR_DATA_DIR}/app-${EXPORTS_APP_ID}-node/hostname"
 
