@@ -7,7 +7,7 @@ services:
      APP_PORT: $APP_PINSERVER_WEB_PORT
 
   node:
-    image: tulipan81/blind_pin_server:v0.0.4@sha256:6c181140ca4fff76ed56b4ceda2efaef45db43c804bffa6a6b8618e8a63cad14
+    image: tulipan81/blind_pin_server:v0.0.4@sha256:339974d80c2759900e1d7f155e32bf20f71e32fe9d7b9ad06440ba8d0a3b3bf9
     depends_on:
       - tor
       - web
@@ -21,7 +21,7 @@ services:
       - ${APP_DATA_DIR}/data/pins:/pins
 
   web: 
-    image: tulipan81/pinserver_web:v0.0.32@sha256:764d63e061484c5c492d6653695ee43944d40f645c622719b1ff3281ee38ed10 
+    image: tulipan81/pinserver_web:v0.0.33@sha256:706d19abd1c41a35d5740ea600f604d76a3b3f38560c485eff320aec7b828da1
     depends_on: 
       - tor
     restart: on-failure
