@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
    environment:
-     APP_HOST: jade-pinserver_web_1
+     APP_HOST: jade-pinserver-beta_web_1
      APP_PORT: $APP_PINSERVER_WEB_PORT
 
   node:
