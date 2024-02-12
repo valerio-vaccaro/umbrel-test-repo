@@ -7,7 +7,7 @@ services:
      APP_PORT: $APP_PINSERVER_WEB_PORT
 
   node:
-    image: tulipan81/blind_pin_server:v0.0.5@sha256:dc53d8bd72217e2ce50a0ff6f4e88bcf18a16e00e90b10ba7d0d8ca441d16db2
+    image: tulipan81/blind_pin_server:v0.0.6@sha256:1a88495c6f66adc14727a40619217561cd94a58789ec25af37c3f3e7c4f06c43
     depends_on:
       - tor
       - web
