@@ -21,7 +21,7 @@ services:
       - ${APP_DATA_DIR}/data/pins:/pins
 
   web: 
-    image: tulipan81/blind_pin_server:v0.0.36@sha256:af20dd30130e4441b05c38373672468dd40fbaa7cf22230c4e91cc5567f702a3
+    image: tulipan81/pinserver_web:v0.0.36@sha256:a5214dbc14538478744a6a0c6bd40f03ab8ac2990abc9038139c18901064205b
     depends_on: 
       - tor
     restart: on-failure
