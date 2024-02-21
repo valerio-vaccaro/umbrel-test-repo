@@ -1,4 +1,4 @@
 # pinserver Hidden Service
 HiddenServiceDir /data/app-$APP_ID-node
-HiddenServicePort $APP_PINSERVER_PORT jade-pinserver-beta_node_1:$APP_PINSERVER_PORT
+HiddenServicePort $APP_PINSERVER_PORT jade-pinserver-beta_node_1:8096
 HiddenServicePort 80 jade-pinserver-beta_web_1:$APP_PINSERVER_WEB_PORT
