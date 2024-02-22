@@ -1,1 +1,1 @@
-# Blockstream Blind Oracle 
+# Blockstream Blind Oracle
